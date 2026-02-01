@@ -40,7 +40,9 @@ app = FastAPI(title="Beautips API", version="1.0.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[ 
+        "https://beau-tips-3y8r.vercel.app"
+                  ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -296,3 +298,4 @@ async def read_root():
     """Serve the landing page"""
     index_path = Path(__file__).parent.parent / "frontend" / "index.html"
     return FileResponse(index_path)
+
