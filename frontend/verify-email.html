@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Подтверждение Email - BeauTips</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/notifications.css">
+    <link rel="stylesheet" href="./notifications.css">
     <style>
         * {
             margin: 0;
@@ -192,7 +192,7 @@
                     
                     // Перенаправляем на страницу входа через 3 секунды
                     setTimeout(() => {
-                        window.location.href = '/static/register.html';
+                        window.location.href = './register.html';
                     }, 3000);
                 } else {
                     errorMessageEl.textContent = data.detail || 'Не удалось подтвердить email. Возможно, ссылка истекла.';
@@ -246,6 +246,7 @@
         // Запускаем верификацию при загрузке
         verifyEmail();
     </script>
-    <script src="/static/notifications.js"></script>
+    <script src="./notifications.js"></script>
 </body>
+
 </html>
