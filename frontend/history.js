@@ -51,7 +51,7 @@ async function loadHistory() {
         // Проверка авторизации
         if (typeof isAuthenticated === 'function' && !isAuthenticated()) {
             localStorage.setItem('redirect_after_login', window.location.pathname);
-            window.location.href = '/static/register.html';
+            window.location.href = './register.html';
             return;
         }
 
@@ -434,7 +434,7 @@ function goToPage(page) {
 }
 
 function viewDetails(sessionId, recommendationId = null) {
-    let url = `/static/results.html?session=${sessionId}`;
+    let url = `./results.html?session=${sessionId}`;
     if (recommendationId) {
         url += `&recommendation_id=${recommendationId}`;
     }
@@ -465,7 +465,7 @@ async function deleteSession(sessionId) {
 }
 
 function shareSession(sessionId) {
-    const url = `${window.location.origin}/static/results.html?session=${sessionId}`;
+    const url = `${window.location.origin}./results.html?session=${sessionId}`;
     
     if (navigator.share) {
         navigator.share({
@@ -583,7 +583,7 @@ function updateEmptyMessage() {
             <div class="empty-icon">📋</div>
             <h2>Пока нет истории</h2>
             <p>Пройдите квиз, чтобы получить первые рекомендации</p>
-            <a href="/static/chat.html" class="btn btn-primary">Пройти квиз</a>
+            <a href="./chat.html" class="btn btn-primary">Пройти квиз</a>
         `;
     }
 }
@@ -620,4 +620,5 @@ window.deleteSession = deleteSession;
 window.shareSession = shareSession;
 window.exportToCSV = exportToCSV;
 window.resetFilters = resetFilters;
+
 window.goToPage = goToPage;
