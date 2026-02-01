@@ -416,12 +416,12 @@ document.addEventListener("DOMContentLoaded", () => {
         saveToBackend()
           .then(() => {
             console.log("📤 Ответы сохранены. Редирект на results.html");
-            window.location.href = `/static/results.html?session=${sessionId}`;
+            window.location.href = `./results.html?session=${sessionId}`;
           })
           .catch(err => {
             console.error("❌ Ошибка сохранения, но редиректим:", err);
             // Редиректим в любом случае - на results.html будет обработка
-            window.location.href = `/static/results.html?session=${sessionId}`;
+            window.location.href = `./results.html?session=${sessionId}`;
           });
 
         return; // ПРЕРЫВАЕМ выполнение (не пытаемся искать DOM элементы шага results)
@@ -1189,3 +1189,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
