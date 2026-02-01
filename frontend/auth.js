@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
           window.location.href = redirectUrl;
         } else {
           // Default redirect to profile page
-          window.location.href = '/static/profile.html';
+          window.location.href = './profile.html';
         }
 
       } catch (error) {
@@ -295,4 +295,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
 });
