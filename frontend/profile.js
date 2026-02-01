@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof isAuthenticated === 'function' && !isAuthenticated()) {
         // Если токена нет, сохраняем текущий URL и редиректим на страницу входа
         localStorage.setItem('redirect_after_login', window.location.href);
-        window.location.href = '/static/register.html';
+        window.location.href = './register.html';
         return;
     }
 
@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         
         // Перенаправляем на страницу входа
-        window.location.href = '/static/register.html?mode=login';
+        window.location.href = './register.html?mode=login';
     }
 });
+
