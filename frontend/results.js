@@ -26,7 +26,7 @@ async function loadResults() {
         // Проверяем авторизацию
         if (typeof isAuthenticated === 'function' && !isAuthenticated()) {
             localStorage.setItem('redirect_after_login', window.location.pathname + window.location.search);
-            window.location.href = '/static/register.html';
+            window.location.href = './register.html';
             return;
         }
 
@@ -325,7 +325,7 @@ function displayResults(recommendations) {
     <div class="ai-results-wrapper">
       <div class="ai-results-header">
         <h1>Ваши результаты анализа кожи</h1>
-        <a href="/static/history.html" class="back-to-history-btn">← Назад к истории</a>
+        <a href="./history.html" class="back-to-history-btn">← Назад к истории</a>
       </div>
 
       <!-- Analysis Section -->
@@ -394,8 +394,8 @@ function displayResults(recommendations) {
 
       <!-- Actions -->
       <div class="ai-actions">
-        <a href="/static/chat.html" class="ai-btn ai-btn-primary">Пройти новый анализ</a>
-        <a href="/static/history.html" class="ai-btn ai-btn-secondary">Вернуться к истории</a>
+        <a href="./chat.html" class="ai-btn ai-btn-primary">Пройти новый анализ</a>
+        <a href="./history.html" class="ai-btn ai-btn-secondary">Вернуться к истории</a>
       </div>
     </div>
   `;
@@ -409,7 +409,8 @@ function showError(message) {
     <div class="error-container">
       <h2>Ошибка</h2>
       <p>${message}</p>
-      <a href="/static/history.html" class="back-btn">← Назад к истории</a>
+      <a href="./history.html" class="back-btn">← Назад к истории</a>
     </div>
   `;
 }
+
