@@ -57,7 +57,7 @@ function saveCurrentUser(user) {
  */
 function logout() {
     removeAuthToken();
-    window.location.href = '/static/register.html?mode=login';
+    window.location.href = './register.html?mode=login';
 }
 
 // ============================================
@@ -108,8 +108,8 @@ async function apiRequest(endpoint, options = {}) {
             if (response.status === 401) {
                 removeAuthToken();
                 const currentPath = window.location.pathname;
-                if (!currentPath.includes('/register.html') && !currentPath.includes('/static/register.html')) {
-                    window.location.href = '/static/register.html?mode=login';
+                if (!currentPath.includes('/register.html') && !currentPath.includes('./register.html')) {
+                    window.location.href = ./register.html?mode=login';
                 }
             }
 
@@ -253,3 +253,4 @@ function resetSessionId() {
     localStorage.setItem('beautips_sessionId', newSessionId);
     return newSessionId;
 }
+
